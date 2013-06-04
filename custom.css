@@ -1,0 +1,614 @@
+/* Body styling */
+
+body {
+	background: pink;/* c */
+	background-repeat:no-repeat;/* c */
+	background-position:top left;/* c */
+	background-attachment:scroll;/* c */
+	border-top:0px solid #000000;/* c */
+
+}
+
+/* Inner wrapper styling */
+
+#wrapper {
+padding: 0 1em 2em;/* c */
+max-width: 960px;/* c */
+margin: 0 auto;/* c */
+}
+
+#inner-wrapper {
+padding: 0;
+background: orange;/* c */
+}
+
+/* header styling */
+
+#header-container {
+  background: darkblue;/* c */ /* Fullwidth header only */
+}
+
+#header {
+  background-color: blue;/* c */
+	background-repeat:no-repeat;/* c */
+	background-position:top center;/* c */
+	margin-top:0px;/* c */
+	margin-bottom:0px;/* c */
+	padding-top:40px;/* c */
+	padding-bottom:40px;/* c */
+	border:0px solid ;/* c */
+
+}
+
+/* logo styling 
+
+If you are using a logo it shoudl be loaded via the them options in canvas.
+
+*/ 
+
+#logo {
+  position: relative; 
+  float: left; /* c */
+  left: 50px; /* c */
+}
+
+
+
+/* Styling for logo text only use if not using a logo */
+
+#logo .site-title a {
+	font:bold 40px/1em "Helvetica Neue", Helvetica, sans-serif;
+	color:#222222;
+}
+#logo .site-description {
+
+	font:300 13px/1em "Helvetica Neue", Helvetica, sans-serif;
+	color:#999999;
+}
+
+
+
+/* Navigation styling - desktop */
+
+/* Tablet Portrait size and sizes above 768 (devices and browsers) */
+@media only screen and (min-width: 768px) {
+  /* 1. GLOBAL DROPDOWN STYLES (these are purely for the dropdown layout and you should only edit the width of the dropdowns) */
+  ul.nav li {
+    position: relative;
+    float: left;
+    zoom: 1;
+    list-style: none;
+    background: purple;/* c */
+  }
+  ul.nav li a {
+    display: block;
+    padding-top: 1em!important;/* c */
+    padding-bottom: 1em!important;/* c */
+    background: green;/* c */
+    color: white;/* c */
+  }
+  ul.nav li a:hover {
+  	color: red;
+    text-decoration: none;
+    background: orange!important;/* c */
+  }
+
+ul.nav li ul li a {
+    color: white!important;/* c */
+    text-decoration: none;
+  }  
+
+
+  ul.nav li ul li a:hover {
+  	color: black!important; /* c */
+    text-decoration: none;
+  }
+
+  ul.nav ul {
+    width:133%; /* width of drop down menu */ /* c */
+    visibility: hidden;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 9999;
+    margin: 0;
+    padding: 0.4em 0;
+  }
+  ul.nav ul li {
+    float: none;
+  }
+  ul.nav ul li a {
+    width: 100%;
+    display: inline-block;
+    padding: 0.7em 1em!important;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 0.9em;
+  }
+  ul.nav ul ul {
+    left: 100%;
+    top: 0;
+  }
+  ul.nav li:hover > ul {
+    visibility: visible;
+  }
+  /*#wrapper #navigation ul.rss  { top: 0; right: 0; float: right; border: none; margin-bottom: 0; padding: 0 10px 0 0; }
+  	#wrapper #navigation ul.rss li  { margin: 0; display: inline; }
+  	#wrapper #navigation ul.rss li a  { padding: 13px 5px; }*/
+  /* 2. TOP NAVIGATION (Add top navigation presentational styles here) */
+  #top {
+    background: #000;
+  }
+  #top h3 {
+    display: none;
+  }
+  #top {
+    display: block!important;
+  }
+  #top ul.nav li a {
+    color: #ddd;
+    padding-top: 0.5em!important;
+    padding-bottom: 0.5em!important;
+    font-size: 1em;
+  }
+  #top ul.nav > li a:hover {
+    background: #555;
+    color: #ddd;
+  }
+  #top ul.nav > li:hover {
+    background: #555;
+    color: #ddd;
+  }
+  #top ul.nav ul {
+    background: #555;
+  }
+  #top ul.nav ul li a {
+    color: #ddd!important;
+  }
+  #top ul.nav li.current_page_item a,
+  #top ul.nav li.current_page_parent a,
+  #top ul.nav li.current-menu-ancestor a,
+  #top ul.nav li.current-cat a,
+  #top ul.nav li.current-menu-item a {
+    color: #333;
+  }
+  /* 3. MAIN NAVIGATION DROPDOWN MENUS (Add main navigation presentational styles here) */
+  #navigation .top-navigation {
+    display: none !important;
+  }
+  .csstransforms3d.csstransitions #navigation,
+  .csstransforms3d.csstransitions .show-nav #navigation,
+  .csstransforms3d.csstransitions .show-nav #inner-wrapper {
+    left: 0px;
+    -webkit-transform: translate3d(0%, 0, 0);
+    -moz-transform: translate3d(0%, 0, 0);
+    -ms-transform: translate3d(0%, 0, 0);
+    -o-transform: translate3d(0%, 0, 0);
+    transform: translate3d(0%, 0, 0);
+  }
+  .nav-toggle,
+  .nav-close,
+  .nav-home {
+    display: none !important;
+  }
+  #navigation {
+    position: relative;/* c */
+    left: auto;/* c */
+    width: 100%;/* c */
+    border: 1px solid red;/* c */
+    padding-top: 0;/* c */
+    margin-bottom: 0; /* c */
+    /* background styling of main nav */
+    background: yellow;/* c */
+    /*background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#f5f5f5));
+    background: -webkit-linear-gradient(#ffffff, #f5f5f5);
+    background: -moz-linear-gradient(center top, #ffffff 0%, #f5f5f5 100%);
+    background: -moz-gradient(center top, #ffffff 0%, #f5f5f5 100%);*//* c */
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.03);/* c */
+    -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.03);/* c */
+    -moz-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.03);/* c */
+    border-radius: 0;/* c */
+    -moz-border-radius: 0;/* c */
+    -webkit-border-radius: 0;/* c */
+    display: block !important;/* c */
+  }
+  #navigation h3 {
+    display: none;
+  }
+
+  #navigation .menus {
+    clear: none;
+  }
+
+  #navigation ul {
+    margin-bottom: 0px;/* c */
+  }
+  #navigation ul ul {
+    margin-left: 0px;/* c */ /* moves drop down menu to the left */
+  }
+
+  #navigation ul li:first-child,
+  #navigation ul li:first-child a {
+    border-radius: 0;/* c */
+    -moz-border-radius: 0;/* c */
+    -webkit-border-radius: 0;/* c */
+  }
+  #navigation ul ul li:first-child,
+  #navigation ul ul li:first-child a {
+    border-radius: 0;/* c */
+    -moz-border-radius: 0;/* c */
+    -webkit-border-radius: 0;/* c */
+  }
+  #navigation ul.nav > li {
+    border-right: 5px solid pink;/* c */
+  }
+  #navigation ul.nav > li a:hover {
+    background: #f6f6f6;
+  }
+  #navigation ul.nav > li:hover {
+    background: #f6f6f6;
+  }
+  #navigation ul.nav ul {
+    background: red;/* c */
+    border: 5px solid #00e8fd;/* c */
+    left: -1px;/* c */
+  }
+
+
+/* Fullwidth  nav styling */
+
+#nav-container {
+border: 1px solid #d9d9d9;
+border-width: 1px;
+background: yellow;/* c */
+background: -webkit-gradient(linear, left top, left bottom, from(yellow), to(#f5f5f5));/* c */
+background: -webkit-linear-gradient(yellow, #f5f5f5);/* c */
+background: -moz-linear-gradient(center top, yellow 0%, #f5f5f5 100%);/* c */
+background: -moz-gradient(center top, yellow 0%, #f5f5f5 100%);/* c */
+margin: 0 0 1em 0;
+}
+
+
+/* Shoppong cart syling */
+
+  #navigation .cart-contents {
+    position: static;
+    height: auto;
+    width: auto;
+    text-indent: 0;
+    display: inline-block;
+    padding: 0;
+    background: none;
+    color: inherit;
+    border-radius: 0 !important;
+    padding: 1em;
+  }
+  #navigation .cart-contents:before {
+    display: inline-block;
+    position: relative;
+    text-indent: 0;
+    line-height: 1;
+  }
+  #navigation .cart-contents {
+    margin-right: .5em;
+  }
+  #navigation .cart-contents:before {
+    margin-right: .5em;
+  }
+
+
+/* RSS styling only */
+
+  #navigation ul.rss {
+    margin: 0;
+  }
+  #navigation ul.rss.cart-enabled {
+    margin: 0;
+  }
+  #navigation ul.rss li a {
+    background: none;
+    color: #95fd00;
+    padding: 1em;
+    margin: 0;
+  }
+  #navigation ul.rss li a:before {
+    line-height: 3.2;
+  }
+  #navigation ul.rss li a:hover {
+    color: #222;
+  }
+
+
+  /* Slider styling */
+
+  /* if you are using magazine style replace .business with .magazine 
+      
+      Slider images are insert via theme using image for slide in slider post.
+
+  */
+
+    .business #loopedSlider .content {
+      overflow: hidden;
+      display: block;
+        background: red;
+         width: 80%;
+        /* right: 0; */ /* only use this if yo uwant to float the contant to the right */
+        left:auto; /* if you want to flaot contetn to the right set left to auto */
+      }
+
+    .business #loopedSlider .content h2 {
+        font:bold 24px/1em Arial, sans-serif;/* c */
+        color:green;/* c */
+        padding: 10px 0 20px 20px;
+       
+      }
+    .business #loopedSlider .content h2.title a {
+        font:bold 24px/1em Arial, sans-serif;/* c */
+        color:yellowgreen;/* c */
+      }
+    .business #loopedSlider .content p {
+        font:300 13px/1.5em Arial, sans-serif;/* c */
+        color:blue;/* c */
+      }
+
+       .business #loopedSlider .title {
+        display: block;
+        background: #000000;/* c */
+        background: rgba(0, 0, 0, 0.9);/* c */
+        max-width:100%;/* c */
+        width: 100%;/* c */
+        padding: 0;/* c */
+        float: left;/* c */
+       
+      }
+
+    .business #loopedSlider .excerpt{
+        font:bold 13px/1.5em Arial, sans-serif;/* c */
+        color: black;/* c */
+        background: #fff;/* c */
+        background: rgba(250, 250, 2500, 0.9);/* c */
+        max-width:80%;/* c */
+        width: 100%;/* c */
+        padding: 10px 0 20px 20px;/* c */
+        float: left;/* c */
+        z-index: 999;
+      }
+
+      .business #loopedSlider a.previous, .business #loopedSlider a.flex-prev {
+        position: absolute;
+        top: 45%;/* c */
+        left: -25px;/* c */
+      }
+
+      #main-sidebar-container .pagination-wrap{
+        background: green!important;
+        display: block;
+        width: 45%;
+        height: 20px;
+      }
+
+
+/* arrows on slider */
+
+      a.flex-prev, a.flex-next {
+        display: block;
+        position: relative;
+        overflow: hidden;
+        width: 16px;/* c */
+        height: 0;
+        padding-top: 30px;/* c */
+      }
+
+      a.flex-next:before, #post-gallery .pagination .jcarousel-next:after {
+        font-family: "FontAwesome";
+        content: "\f054";/* c */
+      }
+
+      a.flex-prev:before, #post-gallery .pagination .jcarousel-prev:before {
+        font-family: "FontAwesome";
+        content: "\f053";/* c */
+      }
+
+
+      /* Slider pagination styling */
+
+#loopedSlider .pagination li a, #loopedSlider .flex-control-nav li a, .slider-pagination a {
+display: block;
+cursor: pointer;
+width: 10px;
+height: 10px;
+text-indent: -9999px;
+background: black;/* c */
+border-radius: 300px;
+-moz-border-radius: 300px;
+-webkit-border-radius: 300px;
+}
+
+#loopedSlider .pagination li.current a, #loopedSlider .flex-control-nav li .flex-active, .slider-pagination .flex-active a {
+background: yellow;/* c */
+}
+
+
+/* Content */
+
+#content {
+padding: 0 0 40px;
+position: relative;
+}
+
+#main-sidebar-container #main {
+  background: white;/* c */
+position: relative;
+}
+
+
+      /* text styling */
+
+body, p {
+
+  font:300 14px/1.5em "Helvetica Neue", Helvetica, sans-serif;
+  color:red;/* c */
+}
+h1 {
+
+  font:bold 28px/1.2em "Helvetica Neue", Helvetica, sans-serif;
+  color:green;/* c */
+}
+h2 {
+
+  font:bold 24px/1.2em "Helvetica Neue", Helvetica, sans-serif;
+  color:blue;/* c */
+}
+h3 {
+  font:bold 20px/1.2em "Helvetica Neue", Helvetica, sans-serif;
+  color:yellow;/* c */
+}
+h4 {
+  font:bold 16px/1.2em "Helvetica Neue", Helvetica, sans-serif;
+  color:orange;/* c */
+}
+h5 {
+  font:bold 14px/1.2em "Helvetica Neue", Helvetica, sans-serif;
+  color:grey;/* c */
+}
+h6 {
+  font:bold 12px/1.2em "Helvetica Neue", Helvetica, sans-serif;
+  color:pink;/* c */
+}
+
+.entry, .entry p{
+  font:300 15px/1.5em "Helvetica Neue", Helvetica, sans-serif;
+  color:green;/* c */
+}
+
+.entry, .entry p ul li{
+  font:300 15px/1.5em "Helvetica Neue", Helvetica, sans-serif;
+  color:black;/* c */
+}
+
+.entry a:link, a:visited {
+color: darkblue;/* c */
+text-decoration: none;
+}
+
+/* features styling */
+
+/* size of images controlled by shortcode within theme */
+.WPSF-features img {
+margin-bottom: 10px;/* c */
+padding: 2px;/* c */
+border: 1px solid #ddd;/* c */
+background: yellow;/* c */
+-moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);/* c */
+-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);/* c */
+box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);/* c */
+}
+
+.WPSF-features h3 {
+  font:bold 20px/1.2em "Helvetica Neue", Helvetica, sans-serif;
+  color: red;/* c */
+}
+
+.WPSF-feature-txt {
+  font:300 15px/1.5em "Helvetica Neue", Helvetica, sans-serif;
+  color:blue;/* c */
+}
+
+.post .title, .page .title, .post .title a:link, .post .title a:visited, .page .title a:link, .page .title a:visited {
+  font:bold 28px/1.1em "Helvetica Neue", Helvetica, sans-serif;
+  color:#222222;
+}
+.post-meta {
+  font:300 12px/1.5em "Helvetica Neue", Helvetica, sans-serif;
+  color:#999999;
+}
+
+.post-more {
+  font:300 13px/1.5em "Helvetica Neue", Helvetica, sans-serif;
+  color:;
+  border-top:0px solid #e6e6e6;
+  border-bottom:0px solid #e6e6e6;
+}
+#post-author, #connect {
+  border-top:1px solid #e6e6e6;
+  border-bottom:1px solid #e6e6e6;
+  border-left:1px solid #e6e6e6;
+  border-right:1px solid #e6e6e6;
+  border-radius:5px;
+  -moz-border-radius:5px;
+  -webkit-border-radius:5px;
+  background-color:#fafafa;}
+
+.nav-entries a, .woo-pagination {
+    font:300 13px/1em "Helvetica Neue", Helvetica, sans-serif;
+    color:#888;
+  }
+.woo-pagination a, .woo-pagination a:hover {
+    color:#888!important;
+  }
+.widget h3 {
+      font:bold 14px/1.2em "Helvetica Neue", Helvetica, sans-serif;
+      color:#555555;
+      border-bottom:1px solid #e6e6e6;
+    }
+.widget_recent_comments li, #twitter li {
+      border-color: #e6e6e6;
+    }
+.widget p, .widget .textwidget {
+      font:300 13px/1.5em "Helvetica Neue", Helvetica, sans-serif;
+      color:#555555;
+    }
+.widget {
+      font:300 13px/1.5em "Helvetica Neue", Helvetica, sans-serif;
+      color:#555555;
+      border-radius:0px;
+      -moz-border-radius:0px;
+      -webkit-border-radius:0px;
+    }
+#tabs .inside li a, .widget_woodojo_tabs .tabbable .tab-pane li a {
+      font:bold 12px/1.5em "Helvetica Neue", Helvetica, sans-serif;
+      color:#555555;
+    }
+#tabs .inside li span.meta, .widget_woodojo_tabs .tabbable .tab-pane li span.meta {
+      font:300 11px/1.5em "Helvetica Neue", Helvetica, sans-serif;
+      color:#999999;
+    }
+#tabs ul.wooTabs li a, .widget_woodojo_tabs .tabbable .nav-tabs li a {
+      font:300 11px/2em "Helvetica Neue", Helvetica, sans-serif;
+      color:#999999;
+    }
+
+/* Archive styling */
+
+		.archive_header {
+				font:bold 18px/1em Arial, sans-serif;
+				color:#222222;
+			}
+		.archive_header {
+				border-bottom:1px solid #e6e6e6;
+			}
+
+/* Footer styling */
+
+    #footer, #footer p {
+        font:300 13px/1.4em "Helvetica Neue", Helvetica, sans-serif;
+        color:black;/* c */
+      }
+
+      #footer a:link, a:visited {
+        color: white;/* c */
+        text-decoration: none;
+      }
+
+    #footer {
+        background: grey;/* c */
+        border-top:1px solid #dbdbdb;/* c */
+        border-bottom:0px solid ;/* c */
+        border-left:0px solid ;/* c */
+        border-right:0px solid ;/* c */
+        border-radius:0px;/* c */
+        -moz-border-radius:0px;/* c */
+        -webkit-border-radius:0px;/* c */
+      }
+
