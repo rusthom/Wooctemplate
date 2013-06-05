@@ -71,7 +71,7 @@ If you are using a logo it shoudl be loaded via the them options in canvas.
 /* Navigation styling - desktop */
 
 /* Tablet Portrait size and sizes above 768 (devices and browsers) */
-@media only screen and (min-width: 768px) {
+
   /* 1. GLOBAL DROPDOWN STYLES (these are purely for the dropdown layout and you should only edit the width of the dropdowns) */
   ul.nav li {
     position: relative;
@@ -133,6 +133,17 @@ ul.nav li ul li a {
   ul.nav li:hover > ul {
     visibility: visible;
   }
+
+  ul.nav li.current_page_item a,
+  ul.nav li.current_page_parent a,
+  ul.nav li.current-menu-ancestor a,
+  ul.nav li.current-cat a,
+  ul.nav li.current-menu-item a {
+    background:red;
+    color: #3088ff;
+}
+
+
   /*#wrapper #navigation ul.rss  { top: 0; right: 0; float: right; border: none; margin-bottom: 0; padding: 0 10px 0 0; }
   	#wrapper #navigation ul.rss li  { margin: 0; display: inline; }
   	#wrapper #navigation ul.rss li a  { padding: 13px 5px; }*/
